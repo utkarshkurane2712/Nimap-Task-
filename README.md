@@ -23,7 +23,7 @@ This project is a Spring Boot REST API for managing **Categories** and **Product
 
 - **Entities**:
   - `Category`: Represents product categories, with fields for `categoryname` and `category_image`.
-  - `Product`: Represents products with fields for `productName`, `price`, `status`, and `imageUrl`. Each product belongs to a `Category`.
+  - `Product`: Represents products with fields for `productName`, `product_price` and `product_image`. Each product belongs to a `Category`.
 
 - **One-to-Many Relationship**:
   - A **Category** can have multiple **Products**.
@@ -34,40 +34,40 @@ This project is a Spring Boot REST API for managing **Categories** and **Product
 ### Category Endpoints
 
 1. **Create a Category**: 
-   - **POST** `/api/categories`
-   - Form Data: `categoryName`, `image` (optional)
+   - **POST** `/Nimap/categories/addCategory`
+   - Form Data: `categoryname`, `image` 
    
 2. **Get All Categories**: 
-   - **GET** `/api/categories`
+   - **GET** `/Nimap/categories`
    
 3. **Get Category by ID**: 
-   - **GET** `/api/categories/{id}`
+   - **GET** `/Nimap/categories/{categoryid}`
    
 4. **Update a Category**: 
-   - **PUT** `/api/categories/{id}`
-   - Form Data: `categoryName`, `image` (optional)
+   - **PUT** `/Nimap/categories/updateCategory/{categoryid}`
+   - Form Data: `categoryName`, `image`
    
 5. **Delete a Category**: 
-   - **DELETE** `/api/categories/{id}`
+   - **DELETE** `/Nimap/categories/deleteCategory/{categoryid}`
 
 ### Product Endpoints
 
 1. **Create a Product**: 
-   - **POST** `/api/products`
-   - Form Data: `productName`, `price`, `status`, `categoryId`, `image` (optional)
+   - **POST** `/Nimap/products/addProducts`
+   - Form Data: `productname`, `product_price`, `categoryid`, `image` 
 
 2. **Get All Products**: 
-   - **GET** `/api/products`
+   - **GET** `/Nimap/products`
 
 3. **Get Product by ID**: 
-   - **GET** `/api/products/{id}`
+   - **GET** `/Nimap/products/{productid}`
 
 4. **Update a Product**: 
-   - **PUT** `/api/products/{id}`
-   - Form Data: `productName`, `price`, `status`, `categoryId`, `image` (optional)
+   - **PUT** `/Nimap/products/updateProduct/{productid}`
+   - Form Data: `productname`, `product_price`, `categoryid`, `image` 
 
 5. **Delete a Product**: 
-   - **DELETE** `/api/products/{id}`
+   - **DELETE** `/Nimap/products/deleteProduct/{productid}`
 
 ## How to Run the Project
 
@@ -75,9 +75,9 @@ This project is a Spring Boot REST API for managing **Categories** and **Product
 
 Make sure you have the following installed:
 
-- **Java 17**
+- **Java 21**
 - **Maven**
-- **MySQL** (or you can switch to H2 in the properties file for local testing)
+- **MySQL**
 - **Cloudinary account** (for image uploading)
 
 ### Steps to Run
