@@ -9,7 +9,7 @@ This project is a Spring Boot REST API for managing **Categories** and **Product
 - Upload images to **Cloudinary** for both **Categories** and **Products**.
 - Return responses using `ResponseEntity` for better HTTP status handling and testing.
 
-## Technology Stack
+## Technology Used
 
 - **Java**: 21
 - **Spring Boot**: 3.x
