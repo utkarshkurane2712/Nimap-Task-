@@ -35,7 +35,7 @@ This project is a Spring Boot REST API for managing **Categories** and **Product
 
 1. **Create a Category**: 
    - **POST** `/Nimap/categories/addCategory`
-   - Form Data: `categoryname`, `image` 
+   - Form Data: `categoryname`, `image` (Optional if you want)
    
 2. **Get All Categories**: 
    - **GET** `/Nimap/categories`
@@ -45,7 +45,7 @@ This project is a Spring Boot REST API for managing **Categories** and **Product
    
 4. **Update a Category**: 
    - **PUT** `/Nimap/categories/updateCategory/{categoryid}`
-   - Form Data: `categoryName`, `image`
+   - Form Data: `categoryName`, `image` 
    
 5. **Delete a Category**: 
    - **DELETE** `/Nimap/categories/deleteCategory/{categoryid}`
@@ -54,7 +54,7 @@ This project is a Spring Boot REST API for managing **Categories** and **Product
 
 1. **Create a Product**: 
    - **POST** `/Nimap/products/addProducts`
-   - Form Data: `productname`, `product_price`, `categoryid`, `image` 
+   - Form Data: `productname`, `product_price`, `categoryid`, `image` (Optional if you want)
 
 2. **Get All Products**: 
    - **GET** `/Nimap/products`
